@@ -4,7 +4,6 @@ import (
 	"context"
 	"io"
 	"log"
-	"math/rand"
 	"time"
 	"fmt"
 	"os"
@@ -21,8 +20,6 @@ const (
 )
 
 func main() {
-	rand.Seed(time.Now().Unix())
-
 	// Set up a connection to the server.
 	conn, err := grpc.Dial(address, grpc.WithInsecure())
 	if err != nil {
